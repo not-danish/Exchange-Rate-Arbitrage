@@ -10,10 +10,10 @@ while True:
   print("2. Edit Variables")
   print("-------------------------")
   selection_1 = input("Select an option from the list: ")
-  if(int(selection_1) == 2):
+  if(str(selection_1) == '2'):
     if(domestic_currency == None or foreign_currency == None or current_exchange == None or domestic_interest == None or foreign_interest == None or expected_exchange == None):
       print("Error: You have not input one or more of your  required values")
-  elif(int(selection_1) == 1):
+  elif(str(selection_1) == '1'):
     print("1. Edit Domestic Currency")
     print("2. Edit Foreign Currency")
     print("3: Edit Current Exchange Rate")
