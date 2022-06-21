@@ -34,7 +34,7 @@ while True:
     print("2. Edit Foreign Currency")
     print("3: Edit Current Exchange Rate")
     print("4. Edit Domestic Interest Rate")
-    print("5. Edit Foreign Domestic Rate")
+    print("5. Edit Foreign Interest Rate")
     print("6. Edit Future/Expected Foreign Exchange Rate")
     print("-------------------------")
     selection_2 = input("Select an option from the list: ")
@@ -42,27 +42,35 @@ while True:
     if(str(selection_2) == '1'):
       domestic_currency = input("Input new Domestic Currency: ")
       print(f"New domestic currency = {domestic_currency}")
-      
+      print("-------------------------")
+
     elif(str(selection_2) == '2'):
       foreign_currency = input("Input new Foreign Currency: ")
       print(f"New foreign currency = {foreign_currency}")
+      print("-------------------------")
       
     elif(str(selection_2) == '3'):
       current_exchange = input("Input current Exchange Rate (DC/FC): ")
       print(f"New exchange rate = {current_exchange}")
-      
+      print("-------------------------")
+
     elif(str(selection_2) == '4'):
       domestic_interest = input("Input new Domestic Interest Rate: ")
       print(f"New domestic interest rate = {domestic_interest}")
+      print("-------------------------")
   
     elif(str(selection_2) == '5'):
       foreign_interest = input("Input new Foreign Interest Rate: ")
       print(f"New foreign interest rate = {foreign_interest}")
+      print("-------------------------")
       
     elif(str(selection_2) == '6'):
       expected_exchange = input("Input new Expected Exchange Rate: ")
       print(f"New expected exchange rate = {expected_exchange}")
+      print("-------------------------")
   
   else:
     print("You have typed an incorrect value, try again...")
+    print("-------------------------")
+
     
