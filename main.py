@@ -10,9 +10,11 @@ while True:
   print("2. Edit Variables")
   print("-------------------------")
   selection_1 = input("Select an option from the list: ")
+  
   if(str(selection_1) == '1'):
     if(domestic_currency == None or foreign_currency == None or current_exchange == None or domestic_interest == None or foreign_interest == None or expected_exchange == None):
       print("Error: You have not input one or more of your required values")
+      
     else:
       domestic_return = 1 + domestic_interest
       foreign_return = (1+foreign_interest)*(expected_exchange/current_exchange)
@@ -37,29 +39,30 @@ while True:
     print("-------------------------")
     selection_2 = input("Select an option from the list: ")
   
-    if(selection_2 == 1):
+    if(str(selection_2) == '1'):
       domestic_currency = input("Input new Domestic Currency: ")
       print(f"New domestic currency = {domestic_currency}")
       
-    elif(selection_2 == 2):
+    elif(str(selection_2) == '2'):
       foreign_currency = input("Input new Foreign Currency: ")
       print(f"New foreign currency = {foreign_currency}")
       
-    elif(selection_2 == 3):
+    elif(str(selection_2) == '3'):
       current_exchange = input("Input current Exchange Rate (DC/FC): ")
       print(f"New exchange rate = {current_exchange}")
       
-    elif(selection_2 == 4):
+    elif(str(selection_2) == '4'):
       domestic_interest = input("Input new Domestic Interest Rate: ")
       print(f"New domestic interest rate = {domestic_interest}")
   
-    elif(selection_2 == 5):
+    elif(str(selection_2) == '5'):
       foreign_interest = input("Input new Foreign Interest Rate: ")
       print(f"New foreign interest rate = {foreign_interest}")
       
-    elif(selection_2 == 6):
+    elif(str(selection_2) == '6'):
       expected_exchange = input("Input new Expected Exchange Rate: ")
       print(f"New expected exchange rate = {expected_exchange}")
+  
   else:
     print("You have typed an incorrect value, try again...")
     
