@@ -10,10 +10,24 @@ while True:
   print("2. Edit Variables")
   print("-------------------------")
   selection_1 = input("Select an option from the list: ")
-  if(str(selection_1) == '2'):
+  if(str(selection_1) == '1'):
     if(domestic_currency == None or foreign_currency == None or current_exchange == None or domestic_interest == None or foreign_interest == None or expected_exchange == None):
-      print("Error: You have not input one or more of your  required values")
-  elif(str(selection_1) == '1'):
+      print("Error: You have not input one or more of your required values")
+    else:
+      domestic_return = 1 + domestic_interest
+      foreign_return = (1+foreign_interest)*(expected_exchange/current_exchange)
+      print(f"Domestic Return = {domestic_return}")
+      print(f"foreign Return = {foreign_return}")
+			
+      if(domestic_return > foreign_return):
+        print("Invest in Domestic Currency")
+      elif(foreign_return > domestic_return):
+        print("Invest in Foreign Currency")
+      else:
+        print("You are indifferent about which currency to invest in")
+			
+				
+  elif(str(selection_1) == '2'):
     print("1. Edit Domestic Currency")
     print("2. Edit Foreign Currency")
     print("3: Edit Current Exchange Rate")
